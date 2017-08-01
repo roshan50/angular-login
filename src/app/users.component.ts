@@ -1,5 +1,5 @@
 import {Component} from '@angular/core'
-import {CourseService} from './course.service'
+import {UserService} from './user.service'
 import {USER} from './user'
 
 const USERS: USER[] = [
@@ -29,7 +29,7 @@ const USERS: USER[] = [
       </ul>
       `,
   styleUrls: ['./app.component.css'],
-  providers: [CourseService]
+  providers: [UserService]
 })
 
 
@@ -44,8 +44,8 @@ export class UsersComponent{
   onSelect(user: USER): void {
     this.selectedUser = user;
   }
-  // courses;
-  // constructor(courseService : CourseService){
-  //   this.courses = courseService.getCourses();
+  // users;
+  // constructor(private userService : UserService){
+  //   this.users = this.userService.getUsers();
   // }
 }
