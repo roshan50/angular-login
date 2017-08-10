@@ -4,8 +4,9 @@ import { Router } from '@angular/router';
 import {  UserService } from '../user.service'; //AlertService,
 
 @Component({
-    moduleId: module.id,
-    templateUrl: 'register.component.html'
+    // moduleId: module.id,
+    templateUrl: 'register.component.html',
+    styleUrls: ['./register.component.css']
 })
 
 export class RegisterComponent {

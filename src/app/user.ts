@@ -1,5 +1,7 @@
 export class USER {
   id: number;
-  name: string;
+  username: string;
   password: string;
+  authKey: string;
+  accessToken:string;
 }

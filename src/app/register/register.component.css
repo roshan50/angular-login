@@ -1,11 +1,14 @@
 .login-content {
     background: #56CA96;
+    width: 50%;
+    padding: 5px;
   }
 
 .login-box {
   background: #509287;
   padding: 20px 20px 0px 20px;
   margin-top: 30px;
+  padding: 5px;
 }
 
  .signup-col {
@@ -13,9 +16,12 @@
    padding-bottom: 20px;
  }
 
- .item-inner {
+ .form-group {
    border-bottom-color: #ffffff !important;
    box-shadow: none !important;
+   margin: 10px;
+   border-radius: 20px;
+
  }
 
  .submit-btn {

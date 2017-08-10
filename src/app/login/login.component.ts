@@ -4,14 +4,14 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { AuthenticationService } from '../authentication.service';
 
 @Component({
-  moduleId: module.id,
+  // moduleId: module.id,
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
 
-  model: any = {};
+   model: any = {};
    loading = false;
    returnUrl: string;
 
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
        this.authenticationService.logout();
 
        // get return url from route parameters or default to '/'
-       this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
+       this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard';//dashboard
    }
 
    login() {
@@ -35,7 +35,12 @@ export class LoginComponent implements OnInit {
        this.authenticationService.login(this.model.username, this.model.password)
            .subscribe(
                data => {
-                   this.router.navigate([this.returnUrl]);
+                //  console.log(data);
+                var user = JSON.parse(localStorage.getItem('currentUser'));
+                //  console.log(JSON.parse(localStorage.getItem('currentUser')));
+                if(user)
+                  this.router.navigate([this.returnUrl]);
+                else this.router.navigate(['login']);
                },
                error => {
                   //  this.alertService.error(error);

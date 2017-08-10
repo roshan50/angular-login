@@ -1,16 +1,14 @@
 .login-content {
     background: #56CA96;
-}
-
-.logo-row {
-  padding-top: 50px;
-  padding-bottom: 20px;
-}
+    width: 50%;
+    padding: 5px;
+  }
 
 .login-box {
-  background: #399F8B;
+  background: #509287;
   padding: 20px 20px 0px 20px;
   margin-top: 30px;
+  padding: 5px;
 }
 
  .signup-col {
@@ -18,18 +16,17 @@
    padding-bottom: 20px;
  }
 
- .item-inner {
+ .form-group {
    border-bottom-color: #ffffff !important;
    box-shadow: none !important;
+   margin: 10px;
  }
 
  .submit-btn {
    background: #51CFB1;
    border-radius: 30px !important;
    border: 1px solid #ffffff;
- }
-
- .register-btn {
-   color: #ffffff;
-   font-size: 0.8em;
- }
+}
+input{
+  /*border-radius: 20px;*/
+}
